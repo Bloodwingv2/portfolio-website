@@ -31,15 +31,16 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
+              className="contact-form"
             >
               <Form.Group className="mb-3" controlId="formBasicName">
                 <Form.Label>Name</Form.Label>
-                <Form.Control type="text" placeholder="Enter your name" />
+                <Form.Control type="text" placeholder="Enter your name" className="form-control-custom" />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter your email" />
+                <Form.Control type="email" placeholder="Enter your email" className="form-control-custom" />
                 <Form.Text className="text-muted">
                   We'll never share your email with anyone else.
                 </Form.Text>
@@ -47,10 +48,10 @@ const Contact = () => {
 
               <Form.Group className="mb-3" controlId="formBasicMessage">
                 <Form.Label>Message</Form.Label>
-                <Form.Control as="textarea" rows={5} placeholder="Your message" />
+                <Form.Control as="textarea" rows={5} placeholder="Your message" className="form-control-custom" />
               </Form.Group>
 
-              <Button variant="primary" type="submit" disabled>
+              <Button variant="primary" type="submit" disabled className="btn-submit-custom">
                 Submit (Non-functional demo)
               </Button>
             </Form>
@@ -62,9 +63,11 @@ const Contact = () => {
               className="text-center mt-5"
             >
               <h4>Or find me on:</h4>
-              <ul className="list-inline">
-                <motion.li className="list-inline-item" whileHover={{ scale: 1.1 }}><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></motion.li>
-                <motion.li className="list-inline-item" whileHover={{ scale: 1.1 }}><a href="#" target="_blank" rel="noopener noreferrer">GitHub</a></motion.li>
+              <ul className="list-inline social-icons mt-4">
+                <motion.li className="list-inline-item" whileHover={{ scale: 1.2 }}><a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin fa-2x"></i></a></motion.li>
+                <motion.li className="list-inline-item" whileHover={{ scale: 1.2 }}><a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github fa-2x"></i></a></motion.li>
+                <motion.li className="list-inline-item" whileHover={{ scale: 1.2 }}><a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter fa-2x"></i></a></motion.li>
+                <motion.li className="list-inline-item" whileHover={{ scale: 1.2 }}><a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram fa-2x"></i></a></motion.li>
                 {/* Add more social media links as needed */}
               </ul>
             </motion.div>

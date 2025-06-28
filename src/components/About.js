@@ -18,42 +18,23 @@ const About = () => {
         <Row className="justify-content-center">
           <Col md={8}>
             <motion.p
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 70, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               className="lead text-center mb-4"
             >
-              Hello! I'm Mirang Bhandari, a passionate [Your Profession] with X years of experience in building dynamic and user-friendly web applications. I specialize in [Your Specialization, e.g., frontend development, full-stack development] and have a strong understanding of modern web technologies.
+              Hello! I'm Mirang Bhandari, a Software Engineer with 2+ years of experience in building dynamic and unique Generative AI Based Applications. I specialize in Generative AI, Agentic AI, full-stack development, LLM's, and have a strong understanding of modern web technologies and Mordern frameworks to create end-end softwares.
             </motion.p>
             <motion.p
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 70, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
               className="text-center"
             >
-              My journey in web development started with a curiosity for how things work on the internet, which quickly evolved into a passion for creating intuitive and visually appealing digital experiences. I am always eager to learn new technologies and improve my skills to deliver high-quality solutions.
             </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-center mt-4"
-            >
-              <h4>Skills:</h4>
-              <ul className="list-inline">
-                <motion.li className="list-inline-item badge bg-primary m-1" whileHover={{ scale: 1.1 }}>React</motion.li>
-                <motion.li className="list-inline-item badge bg-primary m-1" whileHover={{ scale: 1.1 }}>JavaScript</motion.li>
-                <motion.li className="list-inline-item badge bg-primary m-1" whileHover={{ scale: 1.1 }}>HTML5</motion.li>
-                <motion.li className="list-inline-item badge bg-primary m-1" whileHover={{ scale: 1.1 }}>CSS3</motion.li>
-                <motion.li className="list-inline-item badge bg-primary m-1" whileHover={{ scale: 1.1 }}>Bootstrap</motion.li>
-                <motion.li className="list-inline-item badge bg-primary m-1" whileHover={{ scale: 1.1 }}>Framer Motion</motion.li>
-                <motion.li className="list-inline-item badge bg-primary m-1" whileHover={{ scale: 1.1 }}>Git</motion.li>
-                {/* Add more skills as needed */}
-              </ul>
-            </motion.div>
+            
           </Col>
         </Row>
       </Container>

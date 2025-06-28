@@ -1,3 +1,14 @@
+:root {
+  --background-dark: #1C1C2C;
+  --text-light: #E0E0E0;
+  --primary-accent: #00BFFF;
+  --secondary-accent: #FF7F50;
+  --card-background: #28283D;
+  --navbar-background: #222233;
+  --footer-background: #111122;
+  --border-color: #3A3A50;
+}
+
 .App {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -6,9 +17,9 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  background-color: #1a1a1a; /* Darker, modern grey background */
-  color: #e0e0e0; /* Lighter text for dark background */
-  min-height: 100vh; /* Ensure it takes full height */
+  background-color: var(--background-dark); 
+  color: var(--text-light); 
+  min-height: 100vh; 
   text-align: center;
 }
 
@@ -22,12 +33,12 @@ code {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Send to background */
+  z-index: -1; 
 }
 
 .content-wrap {
   position: relative;
-  z-index: 1; /* Keep content above particles */
+  z-index: 1; 
 }
 
 section {
@@ -38,75 +49,75 @@ section {
   min-height: 100vh;
 }
 
-/* Primary accent color: Cyan */
+/* Primary accent color */
 .text-primary {
-  color: #00bcd4 !important; 
+  color: var(--primary-accent) !important; 
 }
 
 .badge.bg-primary {
-  background-color: #00bcd4 !important;
+  background-color: var(--primary-accent) !important;
 }
 
 .btn-primary {
-  background-color: #00bcd4;
-  border-color: #00bcd4;
+  background-color: var(--primary-accent);
+  border-color: var(--primary-accent);
   transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #0097a7;
-  border-color: #0097a7;
+  background-color: #009acd;
+  border-color: #009acd;
   transform: translateY(-2px);
 }
 
-/* Secondary accent color: Vibrant Purple */
+/* Secondary accent color */
 .text-secondary {
-  color: #9c27b0 !important; /* Vibrant Purple */
+  color: var(--secondary-accent) !important; 
 }
 
 .btn-outline-secondary {
-  color: #9c27b0;
-  border-color: #9c27b0;
+  color: var(--secondary-accent);
+  border-color: var(--secondary-accent);
   transition: all 0.3s ease;
 }
 
 .btn-outline-secondary:hover {
-  color: #e0e0e0;
-  background-color: #9c27b0;
-  border-color: #9c27b0;
+  color: var(--background-dark);
+  background-color: var(--secondary-accent);
+  border-color: var(--secondary-accent);
   transform: translateY(-2px);
 }
 
 .navbar {
   transition: all 0.3s ease;
-  background-color: #222222 !important; /* Darker navbar */
+  background-color: var(--navbar-background) !important; 
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-brand,
 .nav-link {
   font-weight: 600;
-  color: #e0e0e0 !important; /* Light text for navbar links */
+  color: var(--text-light) !important; 
 }
 
 .navbar-brand:hover,
 .nav-link:hover {
-  color: #00bcd4 !important; /* Cyan on hover */
+  color: var(--primary-accent) !important; 
 }
 
 .card {
-  border: 1px solid #333333; /* Subtle border for cards */
+  border: 1px solid var(--border-color); 
   border-radius: 10px;
   overflow: hidden;
   transition: all 0.3s ease;
-  background-color: #2a2a2a; /* Dark card background */
-  color: #e0e0e0; /* Light text for cards */
+  background-color: var(--card-background); 
+  color: var(--text-light); 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .card:hover {
-  transform: translateY(-5px); /* More pronounced lift on hover */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); 
 }
 
 .card-img-top {
@@ -119,48 +130,48 @@ section {
 }
 
 footer {
-  background-color: #111111 !important; /* Even darker footer */
-  color: #e0e0e0 !important;
+  background-color: var(--footer-background) !important;
+  color: var(--text-light) !important;
   padding: 20px 0;
-  border-top: 1px solid #333333;
+  border-top: 1px solid var(--border-color);
 }
 
 /* Additional styles for a software engineer vibe */
 h1 {
-  font-size: 3.5rem; /* Larger for impact */
+  font-size: 3.5rem; 
   font-weight: 800;
-  color: #00bcd4; /* Primary color */
+  color: var(--primary-accent); 
 }
 
 h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #00bcd4; /* Primary color */
+  color: var(--primary-accent); 
   margin-bottom: 1.5rem;
 }
 
 h3 {
   font-size: 2rem;
   font-weight: 600;
-  color: #00bcd4; /* Primary color */
+  color: var(--primary-accent); 
 }
 
 h4 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #e0e0e0; /* Light text for cards */
+  color: var(--text-light); 
 }
 
 h5 {
   font-size: 1.25rem;
   font-weight: 500;
-  color: #e0e0e0;
+  color: var(--text-light);
 }
 
 h6 {
   font-size: 1rem;
   font-weight: 500;
-  color: #e0e0e0;
+  color: var(--text-light);
 }
 
 p {
@@ -171,32 +182,176 @@ p {
 
 /* Code blocks */
 pre {
-  background-color: #222222;
-  border: 1px solid #333333;
+  background-color: var(--navbar-background);
+  border: 1px solid var(--border-color);
   border-radius: 5px;
   padding: 15px;
   overflow-x: auto;
 }
 
 pre code {
-  color: #e0e0e0;
-  font-size: 0.95em; /* Slightly larger for readability */
+  color: var(--text-light);
+  font-size: 0.95em; 
 }
 
 /* Example of using secondary color for emphasis */
 .highlight {
-  color: #9c27b0; /* Vibrant Purple for highlights */
+  color: var(--secondary-accent); 
   font-weight: 600;
 }
 
 /* Links */
 a {
-  color: #00bcd4;
+  color: var(--primary-accent);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #9c27b0; /* Purple on hover for links */
+  color: var(--secondary-accent); 
   text-decoration: underline;
+}
+
+/* Skills Section Styles */
+.skill-card {
+  background-color: var(--card-background); 
+  color: var(--text-light); 
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  min-width: 120px; 
+}
+
+.skill-card:hover {
+  background-color: #3A3A50; 
+  transform: translateY(-5px) scale(1.05); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); 
+}
+
+.skill-card i {
+  color: var(--primary-accent); 
+}
+
+.skill-card p {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Contact Form Styles */
+.contact-form .form-label {
+  color: var(--primary-accent); 
+  font-weight: 600;
+  text-align: left; 
+  display: block; 
+}
+
+.contact-form .form-control-custom {
+  background-color: var(--card-background); 
+  border: 1px solid var(--border-color);
+  color: var(--text-light); 
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.contact-form .form-control-custom:focus {
+  background-color: #3A3A50;
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 0 0.25rem rgba(0, 191, 255, 0.25); 
+  color: var(--text-light);
+}
+
+.contact-form .form-control-custom::placeholder {
+  color: #888; 
+}
+
+.contact-form .btn-submit-custom {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+/* Social Icons in Contact Section */
+.social-icons .list-inline-item a {
+  color: var(--text-light); 
+  transition: color 0.3s ease;
+  margin: 0 15px; 
+}
+
+.social-icons .list-inline-item a:hover {
+  color: var(--primary-accent); 
+}
+
+/* Project Modal Styles */
+.modal-content {
+  background-color: var(--card-background);
+  color: var(--text-light);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+}
+
+.modal-header-custom {
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--navbar-background);
+  color: var(--primary-accent);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.modal-header-custom .btn-close {
+  filter: invert(1) brightness(2);
+}
+
+.modal-body-custom {
+  background-color: var(--card-background);
+  padding: 25px;
+}
+
+.modal-footer-custom {
+  border-top: 1px solid var(--border-color);
+  background-color: var(--navbar-background);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.project-details-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.project-card-item {
+  cursor: pointer;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* Back to Top Button */
+.back-to-top-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--primary-accent);
+  color: var(--background-dark);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top-button:hover {
+  background-color: var(--secondary-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }

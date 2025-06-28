@@ -28,8 +28,22 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <Button variant="primary" size="lg" href="#projects" className="me-3">View My Work</Button>
-          <Button variant="outline-secondary" size="lg" href="#contact">Get in Touch</Button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="btn btn-primary btn-lg me-3"
+            onClick={() => window.location.href = '#projects'}
+          >
+            View My Work
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="btn btn-outline-secondary btn-lg"
+            onClick={() => window.location.href = '#contact'}
+          >
+            Get in Touch
+          </motion.button>
         </motion.div>
       </Container>
     </section>
