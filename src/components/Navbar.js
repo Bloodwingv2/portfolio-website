@@ -11,14 +11,14 @@ const AppNavbar = () => {
     >
       <Navbar bg="dark" expand="lg" fixed="top" className="shadow-sm">
         <Container>
-          <Navbar.Brand as={motion.a} whileHover={{ scale: 1.05 }} href="javascript:void(0)">Mirang Bhandari</Navbar.Brand>
+          <Navbar.Brand as={motion.a} whileHover={{ scale: 1.05 }} href="#home">Mirang Bhandari</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link as={motion.a} whileHover={{ scale: 1.05 }} href="#home" role="button">Home</Nav.Link>
-              <Nav.Link as={motion.a} whileHover={{ scale: 1.05 }} href="javascript:void(0)">About</Nav.Link>
-              <Nav.Link as={motion.a} whileHover={{ scale: 1.05 }} href="javascript:void(0)">Projects</Nav.Link>
-              <Nav.Link as={motion.a} whileHover={{ scale: 1.05 }} href="javascript:void(0)">Contact</Nav.Link>
+              <Nav.Link as={motion.a} whileHover={{ scale: 1.05 }} href="#about">About</Nav.Link>
+              <Nav.Link as={motion.a} whileHover={{ scale: 1.05 }} href="#projects">Projects</Nav.Link>
+              <Nav.Link as={motion.a} whileHover={{ scale: 1.05 }} href="#contact">Contact</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
