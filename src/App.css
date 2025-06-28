@@ -1,38 +1,202 @@
 .App {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background-color: #1a1a1a; /* Darker, modern grey background */
+  color: #e0e0e0; /* Lighter text for dark background */
+  min-height: 100vh; /* Ensure it takes full height */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+code {
+  font-family: 'Fira Code', monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Send to background */
 }
 
-.App-header {
-  background-color: #282c34;
+.content-wrap {
+  position: relative;
+  z-index: 1; /* Keep content above particles */
+}
+
+section {
+  padding: 80px 0;
+}
+
+.min-vh-100 {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Primary accent color: Cyan */
+.text-primary {
+  color: #00bcd4 !important; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.badge.bg-primary {
+  background-color: #00bcd4 !important;
+}
+
+.btn-primary {
+  background-color: #00bcd4;
+  border-color: #00bcd4;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0097a7;
+  border-color: #0097a7;
+  transform: translateY(-2px);
+}
+
+/* Secondary accent color: Vibrant Purple */
+.text-secondary {
+  color: #9c27b0 !important; /* Vibrant Purple */
+}
+
+.btn-outline-secondary {
+  color: #9c27b0;
+  border-color: #9c27b0;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  color: #e0e0e0;
+  background-color: #9c27b0;
+  border-color: #9c27b0;
+  transform: translateY(-2px);
+}
+
+.navbar {
+  transition: all 0.3s ease;
+  background-color: #222222 !important; /* Darker navbar */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand,
+.nav-link {
+  font-weight: 600;
+  color: #e0e0e0 !important; /* Light text for navbar links */
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+  color: #00bcd4 !important; /* Cyan on hover */
+}
+
+.card {
+  border: 1px solid #333333; /* Subtle border for cards */
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: #2a2a2a; /* Dark card background */
+  color: #e0e0e0; /* Light text for cards */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  transform: translateY(-5px); /* More pronounced lift on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-body {
+  padding: 25px;
+}
+
+footer {
+  background-color: #111111 !important; /* Even darker footer */
+  color: #e0e0e0 !important;
+  padding: 20px 0;
+  border-top: 1px solid #333333;
+}
+
+/* Additional styles for a software engineer vibe */
+h1 {
+  font-size: 3.5rem; /* Larger for impact */
+  font-weight: 800;
+  color: #00bcd4; /* Primary color */
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00bcd4; /* Primary color */
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #00bcd4; /* Primary color */
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e0e0e0; /* Light text for cards */
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* Code blocks */
+pre {
+  background-color: #222222;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  padding: 15px;
+  overflow-x: auto;
+}
+
+pre code {
+  color: #e0e0e0;
+  font-size: 0.95em; /* Slightly larger for readability */
+}
+
+/* Example of using secondary color for emphasis */
+.highlight {
+  color: #9c27b0; /* Vibrant Purple for highlights */
+  font-weight: 600;
+}
+
+/* Links */
+a {
+  color: #00bcd4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #9c27b0; /* Purple on hover for links */
+  text-decoration: underline;
 }
